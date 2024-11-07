@@ -1,0 +1,580 @@
+/* Custom Properties  */
+
+:root {
+    /* Sky Section */
+    --sky-gradient-1: #A3BDA6;
+    --sky-gradient-2: #609A87;
+    --sky-gradient-3: #5F9986;
+    --sky-gradient-4: #4B8A74;
+    --sky-gradient-5: #163144;
+    --star-white: #E9ECEB;
+    --cloud-white: #FAF6F0;
+
+    /* Land Area Section */
+    --black: #141912;
+    --black-two: #252B21;
+}
+
+/* Animations */
+
+@keyframes twinkle {
+    from {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.35;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes tide {
+    0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5%);
+      }
+}
+
+/* General Styles */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Sky Section */
+
+.sky {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(ellipse 65% 75%, var(--sky-gradient-1) 12%, var(--sky-gradient-2) 40%, var(--sky-gradient-3) 60%, var(--sky-gradient-4) 70%, var(--sky-gradient-5));
+}
+
+.cloud {
+    position: absolute;
+}
+
+.cloud:nth-of-type(1) {
+    top: 13%;
+    left: 30%;
+    opacity: 0.3;
+}
+
+.cloud:nth-of-type(2) {
+    top: 23%;
+    left: -67%;
+    opacity: 0.45;
+    transform: rotateY(180deg);
+}
+
+.cloud:nth-of-type(3) {
+    top: 53%;
+    left: 65%;
+    opacity: 0.5;
+    transform: scaleX(0.8) scaleY(1.5);
+}
+
+.cloud div {
+    position: inherit;
+    background-color: var(--cloud-white);
+}
+
+.cloud div:nth-of-type(1) {
+    width: 30px;
+    height: 15px;
+    border-radius: 150% 120% 100% 200%;
+}
+
+.cloud div:nth-of-type(2) {
+    left: 24px;
+    top: -15px;
+    height: 30px;
+    width: 124px;
+    border-radius: 150% 120% 10px 0;
+}
+
+.cloud div:nth-of-type(3) {
+    left: 147px;
+    top: -26px;
+    height: 40px;
+    width: 150px;
+    border-radius: 170% 140% 10px 0;
+}
+
+.cloud div:nth-of-type(4) {
+    left: 287px;
+    top: -35px;
+    height: 48px;
+    width: 210px;
+    border-radius: 100% 120% 100% 100%;
+}
+
+.cloud div:nth-of-type(5) {
+    left: 296px;
+    top: -6px;
+    height: 19px;
+    width: 200px;
+    border-bottom-right-radius: 10px;
+}
+
+.cloud div:nth-of-type(6) {
+    left: 475px;
+    top: -9px;
+    height: 24px;
+    width: 65px;
+    border-radius: 100% 120% 100% 80%;
+}
+
+.stars {
+    height: 100%;
+    position: relative;
+}
+
+.star {
+    border-radius: 50%;
+    background: var(--star-white);
+    position: absolute;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.star:nth-of-type(1) {
+    left: 25%;
+    top: 18%;
+    width: 4px;
+    height: 4px;
+}
+
+.star:nth-of-type(2) {
+    left: 20%;
+    top: 22%;
+    width: 3px;
+    height: 3px;
+}
+
+.star:nth-of-type(3) {
+    left: 13%;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+}
+
+.star:nth-of-type(4) {
+    left: 70%;
+    top: 15%;
+    width: 6px;
+    height: 6px;
+}
+
+.star:nth-of-type(5) {
+    left: 40%;
+    top: 25%;
+    width: 6px;
+    height: 6px;
+}
+
+.star:nth-of-type(6) {
+    left: 52%;
+    top: 29%;
+    width: 6px;
+    height: 6px;
+}
+
+.star:nth-of-type(7) {
+    left: 60%;
+    top: 35%;
+    width: 6px;
+    height: 6px;
+}
+
+.star:nth-of-type(8) {
+    left: 62%;
+    top: 47%;
+    width: 6px;
+    height: 6px;
+}
+
+.star:nth-of-type(9 ) {
+    left: 54%;
+    top: 35%;
+    width: 5px;
+    height: 5px;
+}
+
+.star:nth-of-type(10) {
+    left: 42%;
+    top: 38%;
+    width: 2px;
+    height: 2px;
+}
+
+.star:nth-of-type(11) {
+    left: 42.25%;
+    top: 42%;
+    width: 3px;
+    height: 3px;
+}
+
+.star:nth-of-type(12) {
+    left: 33%;
+    top: 52%;
+    width: 4px;
+    height: 4px;
+}
+
+.star:nth-of-type(13) {
+    left: 36%;
+    top: 53%;
+    width: 2px;
+    height: 2px;
+}
+
+.star:nth-of-type(14) {
+    left: 31%;
+    top: 50%;
+    width: 3px;
+    height: 3px;
+}
+
+.star:nth-of-type(15) {
+    left: 31%;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+}
+
+.star:nth-of-type(16) {
+    left: 66%;
+    top: 46%;
+    width: 2px;
+    height: 2px;
+}
+
+.star:nth-of-type(17) {
+    left: 71%;
+    top: 43%;
+    width: 7px;
+    height: 7px;
+}
+
+.star:nth-of-type(18) {
+    left: 79%;
+    top: 39%;
+    width: 5px;
+    height: 5px;
+}
+
+.star:nth-of-type(19) {
+    left: 91%;
+    top: 44%;
+    width: 3px;
+    height: 3px;
+}
+
+.star:nth-of-type(20) {
+    left: 90%;
+    top: 22%;
+    width: 3px;
+    height: 3px;
+}
+
+.moon {
+    position: absolute;
+    left: 43%;
+    top: 38%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: var(--star-white);
+    opacity: 0.6;
+}
+
+/* Ship Area Section */
+
+.ship-area {
+    position: absolute;
+    top: 3.25%;
+}
+
+.ship {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    animation: tide 3.3s ease-in-out infinite;
+}
+
+.bowsprit {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 400px;
+    height: 20px;
+    background-color: var(--black-two);
+    transform: rotateZ(-20deg);
+}
+
+.bowsprit div:nth-of-type(1) {
+    position: absolute;
+    bottom: 0;
+    left: 99%;
+    border-left: 50px solid var(--black-two);
+    border-right: 50px solid transparent;
+    border-top: 20px solid var(--black-two);
+}
+
+.bowsprit div:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 50px);
+    width: 75px;
+    height: 5px;
+    background-color: var(--black-two);
+    border-radius: 50px;
+}
+
+.bowsprit div:nth-of-type(3) {
+    position: absolute;
+    bottom: -2px;
+    left: -4px;
+    height: 24px;
+    width: 50px;
+    background-color: var(--black-two);
+    border-radius: 10px;
+}
+
+.bowsprit div:nth-of-type(4) {
+    position: absolute;
+    bottom: -175%;
+    left: -4px;
+    height: 30px;
+    width: 50px;
+    background-color: var(--black-two);
+    border-radius: 5px;
+    transform: rotateZ(10deg);
+}
+
+.bowsprit div:nth-of-type(5) {
+    position: absolute;
+    bottom: -250%;
+    left: -40px;
+    border-left: 20px solid var(--black-two);
+    border-right: 50px solid transparent;
+    border-top: 20px solid var(--black-two);
+    border-radius: 15px;
+    transform: rotateZ(10deg);
+}
+
+.bowsprit div:nth-of-type(6) {
+    position: absolute;
+    top: -10px;
+    width: 320px;
+    height: 5px;
+    background-color: var(--black-two);
+    transform: rotateZ(8deg);
+}
+
+.bowsprit div:nth-of-type(6) {
+    position: absolute;
+    top: -10px;
+    width: 320px;
+    height: 5px;
+    background-color: var(--black-two);
+    transform: rotateZ(8deg);
+}
+
+.bow {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bow div:nth-of-type(1) {
+    position: inherit;
+    top: 42.9%;
+    left: -2.5%;
+    border-left: 40px solid transparent;
+    border-right: 210px solid var(--black-two);
+    border-top: 40px solid transparent;
+    border-top-right-radius: 10px;
+}
+
+.bow div:nth-of-type(2) {
+    position: inherit;
+    left: calc(10% - 4px);
+    top: calc(48% - 10px);
+    width:  26px;
+    height: 58px;
+    background-color: var(--black-two);
+}
+
+.bow div:nth-of-type(3) {
+    position: inherit;
+    top: 46.9%;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background-color: var(--black-two);
+    border-radius: 20% 5% 150% 50%;
+}
+
+/* Land Area Section */
+
+.land-area div {
+    position: absolute;
+    background-color: var(--black);
+}
+
+.land:nth-of-type(1) {
+    top: 74%;
+    left: 17%;
+    width: 150px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--black-two);
+}
+
+.land:nth-of-type(2) {
+    top: 73%;
+    left: 65%;
+    width: 250px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--black-two);
+}
+
+.land:nth-of-type(3) {
+    top: 74.5%;
+    left: 62%;
+    width: 125px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.land:nth-of-type(4) {
+    top: 74%;
+    left: 40%;
+    width: 200px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: var(--black-two);
+}
+
+.land:nth-of-type(5) {
+    top: 73%;
+    left: 43%;
+    width: 220px;
+    height: 95px;
+    border-radius: 50%;
+}
+
+.land:nth-of-type(6) {
+    top: 73.5%;
+    left: 30%;
+    width: 300px;
+    height: 95px;
+    border-radius: 50%;
+}
+
+.land:nth-of-type(7) {
+    top: 73.5%;
+    left: 46%;
+    width: 300px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: var(--black-two);
+}
+
+.anchor-point {
+    position: absolute;
+    top: 64%;
+    left: 20.5%;
+    width: 10px;
+    height: 100px;
+    background-color: var(--black);
+}
+
+.anchor-point div:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 20px;
+    height: 10px;
+    background-color: var(--black);
+    border-radius: 10px;
+}
+
+.anchor-point div:nth-of-type(2) {
+    position: absolute;
+    bottom: -10%;
+    left: -200%;
+    width: 50px;
+    height: 20px;
+    background-color: var(--black);
+    border-radius: 20px 20px 0 0;
+}
+
+.anchor-point div:nth-of-type(3) {
+    position: absolute;
+    top: 35%;
+    width: 14px;
+    height: 12px;
+    left: -2px;
+    border-radius: 4px;
+    background-color: var(--black-two);
+}
+
+.anchor-point div:nth-of-type(3) div {
+    position: absolute;
+    width: 300px;
+    height: 12px;
+    left: -290px;
+    border-radius: 4px;
+    background-color: var(--black-two);
+}
+
+/* Sea Section */
+
+.tide {
+    width: 100vw;
+    height: 100px;
+    position: absolute;
+    bottom: -1vh;
+}
+
+.tide:nth-of-type(1) {
+    background: radial-gradient(circle, #85aa97, #194757);
+    height: 25vh;
+    animation: tide 3.2s ease-in-out infinite;
+}
+
+.tide:nth-of-type(2) {
+    background: radial-gradient(circle, #80AA95, #103440);
+    height: 22.25vh;
+    animation: tide 3.9s ease-in-out infinite;
+}
+
+.tide:nth-of-type(3) {
+    background: radial-gradient(circle, #36817b, #163541);
+    height: 19.8vh;
+    animation: tide 4.25s ease-in-out infinite;
+}
+
+.tide:nth-of-type(4) {
+    background: radial-gradient(circle, #1B5D6A, #0A2831);
+    height: 18vh;
+    animation: tide 3.5s ease-in-out infinite;
+}
+
+.tide:nth-of-type(5) {
+    background: radial-gradient(circle, #0A4C59, #080610);
+    height: 15vh;
+    animation: tide 3.3s ease-in-out infinite;
+    transform: translateY(-3vh);
+}
